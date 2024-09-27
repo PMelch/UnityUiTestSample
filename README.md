@@ -10,6 +10,27 @@ Requires Python3.11
 ## Project Overview
 This project showcases a robust approach to UI testing leveraging the Gherkin syntax, Behave framework, and AltTester. It provides a comprehensive solution for automating UI tests in a structured and maintainable manner.
 
+A sample test case writting Gherking could look like this:
+
+```Gherkin
+Feature: Account Menu
+  With the account menu open, users can manage their data related to their account and log out their user.
+
+  Background:
+    Given user Test1 is logged in
+    And the lobby page is shown
+    And the AccountMenu has been opened
+
+  Scenario: A click on the change password menu entry shows the change-pw dialog
+    When the user clicks the "Change Password" button
+    Then the "Change Password" page is shown
+
+  Scenario: A click on the logou button will end the user session and forward to the log-in page
+    When the user clicks the "Logout" button
+    Then no user is logged in
+    And the "Login" page is shown
+``` 
+
 ### Key Components and Workflow
 
 - Gherkin: A human-readable language for describing test scenarios in a natural language format.
