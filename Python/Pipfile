@@ -6,8 +6,8 @@ name = "pypi"
 [dev-packages]
 
 [packages]
-behave = "*"
-alttester-driver = "*"
+behave = "1.2.6"
+alttester-driver = "2.1.2"
 
 [requires]
-python_version = "3.11"
+python_version = "3"

@@ -5,7 +5,7 @@ A Unity6 sample project to demonstrate how to write UI tests using Gherkin Synta
 
 Tested with Unity version: Unity6 (6000.0.19f1).
 
-Requires Python3.11
+Requires Python >= 3.8
 
 ## Project Overview
 This project showcases a robust approach to UI testing leveraging the Gherkin syntax, Behave framework, and AltTester. It provides a comprehensive solution for automating UI tests in a structured and maintainable manner.
