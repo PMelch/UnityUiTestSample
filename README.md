@@ -52,7 +52,7 @@ Feature: Account Menu
 - Flexibility: The AltTesterDesktop acts as a flexible intermediary, allowing for customization and integration with other tools.
 
 ## Prerequisites
-- Python 3.11 installation
+- Python >= 3.8 installation
 - pipenv (Installation instructions: https://pipenv.pypa.io/en/latest/installation.html)
 - AltTesterDesktop application (download from https://alttester.com/downloads)
 
