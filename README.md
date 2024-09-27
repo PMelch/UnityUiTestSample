@@ -63,4 +63,4 @@ Feature: Account Menu
 4. run `pipenv install` to install the required packages.
 5. Open the AltTesterDesktop application
 5. In Unity, open the Scenes/TestingStart scene and hit play - you should see now in the AltTesterDesktop application that the app has connected
-6. In the Python folder, run `pipenv run src/main.py` to execute the test scenarios.
+6. In the Python folder, run `pipenv run python src/main.py` to execute the test scenarios.
