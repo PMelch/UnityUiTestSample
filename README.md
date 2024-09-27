@@ -25,7 +25,7 @@ Feature: Account Menu
     When the user clicks the "Change Password" button
     Then the "Change Password" page is shown
 
-  Scenario: A click on the logou button will end the user session and forward to the log-in page
+  Scenario: A click on the logout menu entry will end the user session and forward to the log-in page
     When the user clicks the "Logout" button
     Then no user is logged in
     And the "Login" page is shown
