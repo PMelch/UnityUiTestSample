@@ -1,4 +1,4 @@
-from uitests import uitestrunner
+import uitestrunner
 
 if __name__ == '__main__':
     import argparse
