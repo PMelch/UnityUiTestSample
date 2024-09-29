@@ -1,5 +1,5 @@
 # Unity UiTest Sample Setup
-__Version: 1.0.0__
+__Version: 1.1.0__
 
 A Unity6 sample project to demonstrate how to write UI tests using Gherkin Syntax.
 
@@ -63,4 +63,9 @@ Feature: Account Menu
 4. run `pipenv install` to install the required packages.
 5. Open the AltTesterDesktop application
 5. In Unity, open the Scenes/TestingStart scene and hit play - you should see now in the AltTesterDesktop application that the app has connected
-6. In the Python folder, run `pipenv run python src/main.py` to execute the test scenarios.
+6. In the Python folder, run `pipenv run python main.py` to execute the test scenarios.
+
+## Project Structure
+- Gherkin feature files in `Python/features`
+- step implementations in `Python/features/steps`
+- C# implementations of custom test hooks in `Assets/Scripts/uitest/UiTestInterface.cs`
