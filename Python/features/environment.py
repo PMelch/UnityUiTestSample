@@ -32,7 +32,12 @@ def before_scenario(context: behave.runner.Context, scenario: behave.model.Scena
         scenario.skip("Test has tag: @skip")
         return
     try:
-        pass
+        # the BeforeTestScene should reset all necessary mocks and internal states
+        # so that each test can run independently of all previous tests.
+        # This scene should stop all async operations that were started in previous test cases,
+        # reset internal data models and remove other components that could
+        # be leftovers from the previous test case.
+        context.alt_driver.load_scene('Scenes/BeforeEachTest')
 
     except Exception as e:
         print(f"There's a problem connecting to the AltTester device. Exception: {e}")

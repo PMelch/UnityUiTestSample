@@ -1,5 +1,5 @@
 # Unity UiTest Sample Setup
-__Version: 1.1.0__
+__Version: 1.2.0__
 
 A Unity6 sample project to demonstrate how to write UI tests using Gherkin Syntax.
 
@@ -69,3 +69,23 @@ Feature: Account Menu
 - Gherkin feature files in `Python/features`
 - step implementations in `Python/features/steps`
 - C# implementations of custom test hooks in `Assets/Scripts/uitest/UiTestInterface.cs`
+- TestingStart scene in `Assets/Scenes/TestingStart.unity`.
+  This scene is the starting point for all tests. If you need to setup
+  global mocks, data models or other things that should be available in all tests, you can do it here.
+ 
+- BeforeEachTest scene in `Assets/Scenes/BeforeEachTest.unity`.
+  This scene is loaded before each test scenario. In this scene, 
+  make sure that no leftover state from previous tests is present.
+
+## State bleeding
+A test state refers to the specific environment or conditions necessary 
+for a test to execute correctly. It can involve factors like data in models, 
+files, or application objects. 
+
+State bleeding occurs when the state of one test affects subsequent tests, 
+potentially leading to incorrect results. 
+
+To prevent this, it's crucial to reset the state before each test. 
+This can be achieved using the BeforeEachTest scene, 
+which allows you to execute code that establishes a clean slate for each test, 
+ensuring accurate and reliable results.
