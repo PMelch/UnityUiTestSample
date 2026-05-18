@@ -40,29 +40,30 @@ Feature: Account Menu
 ### Test Execution Flow
 - Gherkin Feature Files: Test scenarios are defined in Gherkin feature files, using a Given-When-Then structure.
 - Behave Framework: Behave reads the feature files and converts them into executable test cases.
-- AltTester Driver: The test step implementations within Behave utilize the AltTester driver to establish a connection with the AltTesterDesktop application.
-- AltTesterDesktop: This desktop application acts as a bridge between the test scripts and the Unity application.
-- Unity Integration: The AltTester package is integrated into the Unity project, enabling communication with AltTesterDesktop.
-- Command Execution: AltTesterDesktop receives commands from the test scripts and forwards them to the Unity application for execution.
+- AltTester Driver: The test step implementations within Behave utilize the AltTester driver to establish a connection with the open-alttester-server application.
+- open-alttester-server: This node application acts as a bridge between the test scripts and the Unity application.
+- Unity Integration: The AltTester package is integrated into the Unity project, enabling communication with open-alttester-server.
+- Command Execution: open-alttester-server receives commands from the test scripts and forwards them to the Unity application for execution.
 
 ### Benefits of This Approach
 - Readability: Gherkin's natural language syntax makes test cases easy to understand for both technical and non-technical stakeholders.
 - Maintainability: The separation of concerns between test scenarios, step definitions, and driver implementation enhances code maintainability.
 - Automation: AltTester's automation capabilities enable efficient and reliable testing.
-- Flexibility: The AltTesterDesktop acts as a flexible intermediary, allowing for customization and integration with other tools.
 
 ## Prerequisites
 - Python >= 3.8 installation
 - pipenv (Installation instructions: https://pipenv.pypa.io/en/latest/installation.html)
-- AltTesterDesktop application (download from https://alttester.com/downloads)
+- open-alttester-server (https://github.com/PMelch/open-alttester-server)
+- nodejs (npx is used)
 
 ## Get Started
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
 3. Change directory to the Python folder
 4. run `pipenv install` to install the required packages.
-5. Open the AltTesterDesktop application
-5. In Unity, open the Scenes/TestingStart scene and hit play - you should see now in the AltTesterDesktop application that the app has connected
+5. start the server application: `npx --yes open-alttester-server`
+6. you can open the dashboard now at http://localhost:13000 
+5. In Unity, open the Scenes/TestingStart scene and hit play - you should see now in the open-alttester-server dashboard application that the app has connected
 6. In the Python folder, run `pipenv run python main.py` to execute the test scenarios.
 
 ## Project Structure
