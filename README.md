@@ -3,7 +3,7 @@ __Version: 1.2.0__
 
 A Unity6 sample project to demonstrate how to write UI tests using Gherkin Syntax.
 
-Tested with Unity version: Unity6 (6000.0.19f1).
+Tested with Unity version: Unity 6 (6000.3.11f1).
 
 Requires Python >= 3.8
 
